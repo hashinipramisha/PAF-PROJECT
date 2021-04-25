@@ -12,7 +12,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Jersey Web Application</servlet-name>
-		<url-pattern>/ProjectService/*</url-pattern>
+		<url-pattern>/projectService/*</url-pattern>
 	</servlet-mapping>
 
 

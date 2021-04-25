@@ -25,7 +25,7 @@ import model.project;
 public class projectService {
 
 
-	project projectdbObj = new project();
+	project projectdb1Obj = new project();
 
 
 	@GET
@@ -33,8 +33,8 @@ public class projectService {
 	@Produces(MediaType.TEXT_HTML)
 	public String readproject()
 	{
-		projectdbObj = new project();
-		return projectdbObj.readproject();
+		projectdb1Obj = new project();
+		return projectdb1Obj.readproject();
 	}
 
 
@@ -44,8 +44,8 @@ public class projectService {
 	@Produces(MediaType.TEXT_PLAIN)
 	public String insertproject(@FormParam("projectName") String projectName,@FormParam("category") String category,@FormParam("budget") String budget, @FormParam("description") String description)
 	{
-		projectdbObj = new project();
-		String output = projectdbObj.insertproject(projectName, budget, description, category);
+		projectdb1Obj = new project();
+		String output = projectdb1Obj.insertproject(projectName, budget, description, category);
 		return output;
 	}
 
@@ -65,7 +65,7 @@ public class projectService {
 		String category = projectObject.get("category").getAsString();
 		String budget = projectObject.get("budget").getAsString();
 		String description = projectObject.get("description").getAsString();
-		String output = projectdbObj.updateproject(projectName, category, budget, description,projectID);
+		String output = projectdb1Obj.updateproject(projectName, category, budget, description,projectID);
 		return output;
 	}
 
@@ -82,7 +82,7 @@ public class projectService {
 
 		//Read the value from the element 
 		 String projectID = doc.select("projectID").text();
-		 String output = projectdbObj.deleteproject(projectID);
+		 String output = projectdb1Obj.deleteproject(projectID);
    		return output;
 		
 	}
