@@ -79,7 +79,8 @@ public class paymentM {
 	 String Type = rs.getString("Type");
 	 String CrdType = rs.getString("CrdType");
 	 // Add into the html table
-	 output += "<tr><td>" + Username + "</td>";
+	 output += "<tr><td>" + PaymentID + "</td>";
+	 output += "<td>" + Username + "</td>";
 	 output += "<td>" + Amount + "</td>";
 	 output += "<td>" + Type + "</td>";
 	 output += "<td>" + CrdType + "</td>";
@@ -122,6 +123,7 @@ public class paymentM {
 	preparedStmt.setString(3, Type);
 	preparedStmt.setString(4, CrdType);
 	preparedStmt.setInt(5, PaymentID);
+	
 	// execute the statement
 	preparedStmt.execute();
 	con.close();
@@ -143,7 +145,7 @@ public class paymentM {
 					return "Error while connecting to the database for deleting.";
 				}
 	// create a prepared statement
-				String query = "delete from items where PaymentID=?";
+				String query = "delete from payment where PaymentID=?";
 				PreparedStatement preparedStmt = con.prepareStatement(query);
 	// binding values
 				preparedStmt.setInt(1, Integer.parseInt(PaymentID));
