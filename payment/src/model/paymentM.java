@@ -105,7 +105,7 @@ public class paymentM {
 
 	
 	
-	public String updatepaymentM( String Username, String Amount, String Type, String CrdType, int PaymentID)
+	public String updatepaymentM(String Username, String Amount, String Type, String CrdType, int PaymentID)
 
 	{
 	String output = "";

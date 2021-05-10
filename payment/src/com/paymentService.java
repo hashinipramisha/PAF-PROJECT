@@ -66,7 +66,7 @@ public class paymentService {
 		String Amount = paymentMObject.get("Amount").getAsString();
 		String Type = paymentMObject.get("Type").getAsString();
 		String CrdType = paymentMObject.get("CrdType").getAsString();
-		String output = paymentdbObj.updatepaymentM(CrdType, Username, Amount, Type, PaymentID);
+		String output = paymentdbObj.updatepaymentM(Username, Amount, Type, CrdType, PaymentID);
 		return output;
 	}
 
